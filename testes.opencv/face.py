@@ -1,9 +1,10 @@
 import cv2
 camera = cv2.VideoCapture(0)
-classificador = cv2.CascadeClassifier(r'inovatech/haarcascade_frontalface_default.xml')
+classificador = cv2.CascadeClassifier(r'haarcascade_frontalface_default.xml')
 
 while True :
     check,img= camera.read()
+    img = cv2.flip(img, 1)
     imgGray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     objetos = classificador.detectMultiScale(imgGray,minSize=(100,100))#vai detectar onde está o rosto em cordenadas 
 
@@ -15,3 +16,5 @@ while True :
 
     if cv2.waitKey(1) & 0xFF == 27:  
         break
+camera.release()
+cv2.destroyAllWindows()
