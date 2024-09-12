@@ -1,7 +1,7 @@
 import cv2 
 import pickle
 
-img = cv2.imread('./img/maquete01.png')
+img = cv2.imread('./img/maqueten.png')
 print(f'Tamanho da imagem: {img.shape[1]}x{img.shape[0]} (Largura x Altura em pixels)')
 vagas = []
 for x in range(22):

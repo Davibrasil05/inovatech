@@ -8,7 +8,7 @@ with open('vagas.pkl','rb')as arquivos:
     vagas = pickle.load(arquivos)
 
 
-video =cv2.VideoCapture('./videos/maquete05.mp4')
+video =cv2.VideoCapture('./videos/maquete06.mp4')
 
 while True:
     check,img = video.read()
@@ -31,5 +31,5 @@ while True:
              cv2.rectangle(img,(x,y), (x+w,y+h),(0,0,255),1)
 
     cv2.imshow('video',img)
-   #---- cv2.imshow('videoth',imgdilat)
+    #cv2.imshow('videoth',imgdilat)
     cv2.waitKey(10)
