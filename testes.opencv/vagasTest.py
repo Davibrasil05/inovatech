@@ -1,7 +1,7 @@
 import cv2 
 import pickle
 
-img = cv2.imread('inovatech/estacionamento.png')
+img = cv2.imread('inovatech\estacionamento.png')
 vagas = []
 for x in range(69):
     vaga = cv2.selectROI('vagas',img,False)
