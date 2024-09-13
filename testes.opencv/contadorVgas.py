@@ -21,7 +21,7 @@ with open('vagas.pkl', 'rb') as arquivos:
     vagas = pickle.load(arquivos)
 
 
-video =cv2.VideoCapture('./videos/maquete05.mp4')
+video =cv2.VideoCapture('./videos/maquete06.mp4')
 
 while True:
     check, img = video.read()
