@@ -3,26 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel web </title>
+    <title>Painel Web</title>
+    <style>
+      .vaga {
+          width: 20px;
+          height: 20px;
+          border-radius: 3px;
+          display: inline-block;
+          margin: 5px auto;
+      }
+      .verde {
+          background-color: green;
+      }
+      .vermelho {
+          background-color: red;
+      }
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          text-align: left;
+      }
+      th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+      }
+      th {
+          background-color: #f4f4f4;
+      }
+  </style>
+  
 </head>
 <body>
-    <h1>Data from Database</h1>
-    <button id="fetchData">Fetch Data</button>
+    <h1>Painel de Vagas</h1>
+    <button id="fetchData">Atualizar Vagas</button>
     <div id="result"></div>
     <table id="table">
-        <thead>
+      <thead>
           <tr>
-            <th>ID</th>
-            <th>Spot Number</th>
-            <th>Status</th>
+              <th>ID</th>
+              <th>Spot Number</th>
+              <th>Status</th>
+              <th></th> <!-- Coluna para o bloco -->
           </tr>
-        </thead>
-        <tbody id="tbd">
-          <!-- As novas linhas serão inseridas aqui -->
-        </tbody>
-      </table>
+      </thead>
+      <tbody id="tbd">
+          <!-- Linhas serão inseridas aqui -->
+      </tbody>
+  </table>
   
-    
+    <div id="vagaStatus" class="container">
+        <!-- Blocos indicando vagas serão inseridos aqui -->
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
